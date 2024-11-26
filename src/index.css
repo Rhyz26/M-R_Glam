@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *{
     background-color: white;
     
@@ -19,6 +20,10 @@
     padding: 10px;
     flex-wrap: wrap;
     gap: 15px;
+    position: sticky;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     
   }
   
