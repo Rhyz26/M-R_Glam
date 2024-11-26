@@ -2,34 +2,38 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="header">
-      <ul>
-        <li className="text-orange-600">
-          <Link to="/">Home</Link>
-        </li>
-
+    <div className="header bg-gray-800 text-white px-4 py-2">
+      <div className="flex items-center justify-between">
+        <div className="logo text-xl font-bold">
+          <Link to="/" className="text-yellow-300 hover:text-yellow-400">M&R Glam</Link>
+        </div>
+        <div className="search-bar flex-1 mx-4">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full p-2 rounded-lg bg-gray-200 text-gray-800"
+          />
+        </div>
+        <div className="actions flex items-center space-x-4">
+          <Link to="/profile" className="text-gray-300 hover:text-yellow-400">Profile</Link>
+          <Link to="/cart" className="text-gray-300 hover:text-yellow-400">Cart</Link>
+        </div>
+      </div>
+      <ul className="nav-links flex justify-around mt-4">
         <li>
-          <Link to="/about">About us</Link>
+          <Link to="/" className="text-gray-300 hover:text-orange-400">Home</Link>
         </li>
-
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/about" className="text-gray-300 hover:text-orange-400">About Us</Link>
         </li>
-
-        <li className='text-red-600'>
-          <Link to="/search">Search</Link>
-        </li>
-
         <li>
-          <Link to="/deal">Deals</Link>
+          <Link to="/contact" className="text-gray-300 hover:text-orange-400">Contact</Link>
         </li>
-
         <li>
-          <Link to="/categories">Categories</Link>
+          <Link to="/deals" className="text-gray-300 hover:text-orange-400">Deals</Link>
         </li>
-
         <li>
-          <Link to="/profile">Profile</Link>
+          <Link to="/categories" className="text-gray-300 hover:text-orange-400">Categories</Link>
         </li>
       </ul>
     </div>
