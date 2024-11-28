@@ -2,16 +2,31 @@ import React from 'react';
 import { Carousel } from '@mantine/carousel';
 import { Button, MantineProvider } from '@mantine/core';
 import { Link } from 'react-router-dom';
+import '@mantine/carousel/styles.css';
+import { useState } from 'react';
 
 const Home = () => {
-  
+  // Carousel items with image URLs from a website
   const carouselItems = [
-    { id: 1, title: "Trendy Men's Wear", image: 'https://images.pexels.com/photos/15647643/pexels-photo-15647643/free-photo-of-a-woman-with-an-afro-sitting-on-a-bench-with-a-dog.jpeg?auto=compress&cs=tinysrgb&w=600', link: '/mens-fashion' },
-    { id: 2, title: "Elegant Women's Wear", image: 'https://example.com/womens-fashion.jpg', link: '/womens-fashion' },
-    { id: 3, title: 'Stylish Accessories', image: 'https://example.com/accessories.jpg', link: '/accessories' },
+    {
+      id: 1,
+      title: "Trendy Men's Wear",
+      image: 'https://images.pexels.com/photos/15647643/pexels-photo-15647643.jpeg?auto=compress&cs=tinysrgb&w=600',
+      link: '/mens-fashion',
+    },
+    {
+      id: 2,
+      title: "Elegant Women's Wear",
+      image: 'https://images.pexels.com/photos/15645024/pexels-photo-15645024.jpeg?auto=compress&cs=tinysrgb&w=600',
+      link: '/womens-fashion',
+    },
+    {
+      id: 3,
+      title: 'Stylish Accessories',
+      image: 'https://images.pexels.com/photos/15647232/pexels-photo-15647232.jpeg?auto=compress&cs=tinysrgb&w=600',
+      link: '/accessories',
+    },
   ];
-
-
 
   return (
     <MantineProvider>
@@ -31,7 +46,16 @@ const Home = () => {
 
         {/* Hero Section */}
         <section className="py-8">
-          <Carousel slideSize="100%" loop withIndicators height={500}>
+          <Carousel
+            slideSize="100%"
+            loop
+            withIndicators
+            height={500}
+            slideGap="sm"
+            align="start"
+            withAutoplay
+            autoplayInterval={3000} // Autoplay every 3 seconds
+          >
             {carouselItems.map((item) => (
               <Carousel.Slide key={item.id}>
                 <div
@@ -40,9 +64,7 @@ const Home = () => {
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-center">
-                      <h2 className="text-4xl font-bold text-white mb-4">
-                        {item.title}
-                      </h2>
+                      <h2 className="text-4xl font-bold text-white mb-4">{item.title}</h2>
                       <Link to={item.link}>
                         <Button size="lg" color="pink">
                           Shop Now
@@ -70,13 +92,14 @@ const Home = () => {
                   className="flex flex-col w-full sm:w-[48%] md:w-[30%] lg:w-[22%] border rounded-lg p-4 shadow-sm hover:shadow-lg"
                 >
                   <img
-                    src={`https://images.pexels.com/photos/17244623/pexels-photo-17244623/free-photo-of-a-woman-in-a-crop-top-and-leggings-poses-on-a-pole.jpeg?auto=compress&cs=tinysrgb&w=600${index + 1}.jpg `}
+                    src={`https://images.pexels.com/photos/${17244623 + index}/pexels-photo-${17244623 + index}.jpeg?auto=compress&cs=tinysrgb&w=600
+`}
                     alt={`Product ${index + 1}`}
                     className="w-full h-48 object-cover rounded-md mb-4"
                   />
-                  <h3 className="text-lg font-semibold text-gray-700">
-                    Product {index + 1}
-                  </h3>
+
+
+                  <h3 className="text-lg font-semibold text-gray-700">Product {index + 1}</h3>
                   <p className="text-gray-500 mt-1">$99.99</p>
                   <Button color="pink" fullWidth className="mt-4">
                     Add to Cart
@@ -99,6 +122,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
