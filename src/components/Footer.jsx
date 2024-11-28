@@ -1,4 +1,6 @@
-function Footer(){
+
+
+function Footer() {
   return (
     <footer className="footer">
       <div className="footer-section">
@@ -35,59 +37,40 @@ function Footer(){
           <img src="/airtel_momo.png" alt="Airtel Pay" />
           <img src="/mtn_momo.png" alt="MTN Pay" />
         </div>
-      </div>
-      <div className="footer-section">
-        <h3 className="mr-0">Stay Connected</h3>
-        <div className="social-icons flex">
-          <a href="https://facebook.com"><i className="fab fa-facebook"></i><img src="/facebook.jpg" alt="facebook" /></a>
-          <a href="https://twitter.com"><i className="fab fa-twitter"></i><img src="/x space.png" alt="twitter" /></a>
-          <a href="https://instagram.com"><i className="fab fa-instagram"><img src="/instagram.jpg" alt="instagram" /></i></a>
-          <a href="https://pinterest.com"><i className="fab fa-instagram"><img src="/pinterest.png" alt="pinterest" /></i></a>
-          
+
+        <div>
+          <h3 style={{ color: '#fbceb1' }}>Stay Connected</h3>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+            <a href="https://facebook.com">
+              <img src="/facebook.jpg" alt="Facebook" style={iconStyle} />
+            </a>
+            <a href="https://twitter.com">
+              <img src="/x space.png" alt="Twitter" style={iconStyle} />
+            </a>
+            <a href="https://instagram.com">
+              <img src="/instagram.jpg" alt="Instagram" style={iconStyle} />
+            </a>
+            <a href="https://pinterest.com">
+              <img src="/pinterest.png" alt="Pinterest" style={iconStyle} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
   );
+}
+
+// const linkStyle = {
+//   color: '#f8a879',
+//   textDecoration: 'none',
+//   margin: '5px 0',
+//   fontWeight: 'bold',
+//   display: 'block',
+// };
+
+const iconStyle = {
+  width: '40px',
+  height: 'auto',
 };
-export default Footer
 
-//     <div className='footer'>
-//          <ul>
-//          <li>
-
-//          <Link to="/">Home</Link>
-//          </li>
-         
-         
-//          <li>
-//          <Link to="/about">About us</Link>
-
-//          </li>
-         
-//          <li>
-//                 <Link to="/contact">Contact</Link>
-//             </li>
-
-//             <li>
-//                 <Link to="/search">Search</Link>
-//             </li>
-
-//             <li>
-//                 <Link to="/account">My Account</Link>
-//             </li>
-
-//             <li>
-//                 <Link to="/deal">Deals</Link>
-//             </li>
-
-//             <li>
-//                 <Link to="/categories">Categories</Link>
-//             </li>
-
-//         </ul>
-
-
-//     </div>
-  
-
-// export default Footer
+export default Footer;
