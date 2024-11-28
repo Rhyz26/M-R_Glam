@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function About() {
   return (
@@ -8,5 +8,5 @@ function About() {
   )
 }
 
-export default AboutUs;
+export default About;
 
