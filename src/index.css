@@ -12,64 +12,20 @@
 }
 
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: peachpuff;;
-    color: #793b51;
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 15px;
-    position: sticky;
-    position: fixed;
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root {
+    min-height: 100%;
+    position: relative;
+  }
+  
+  footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
-    
   }
   
-  .footer-section {
-    flex: 1 1 20%;
-     margin: 0px; 
-  }
-  
-  .footer-section h3 {
-    color: #aa5877;
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
-    text-decoration: none;
-    color: #793b51;
-    transition: color 0.3s;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #aa5877;
-  }
-  
-  .payment-icons img, .social-icons a {
-    width: 40px;
-    height: auto;
-    margin: 0 5px;
-    transition: transform 0.3s;
-  }
-  
-  .payment-icons img:hover, .social-icons a:hover {
-    transform: scale(1.1);
-  }
-  
-  .social-icons a {
-    font-size: 24px;
-    color: #793b51;
-    margin-right: 10px;
-  }
   
