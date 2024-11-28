@@ -1,68 +1,41 @@
-import { Link } from 'react-router-dom';
+
 
 function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: '#fde8d7',
-        color: '#f8a879',
-        padding: '20px 0',
-        bottom: '0',
-        width: '100%',
-        textAlign: 'center',
-        boxSizing: 'border-box',
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-        <div>
-          <h3 style={{ color: '#fbceb1' }}>Customer Service</h3>
-          <Link to="/help-center" style={linkStyle}>
-            Help Center
-          </Link>
-          <Link to="/terms" style={linkStyle}>
-            Terms and Conditions
-          </Link>
-          <Link to="/feedback" style={linkStyle}>
-            Take our Feedback Survey
-          </Link>
-        </div>
-
-        <div>
-          <h3 style={{ color: '#fbceb1' }}>Shopping with Us</h3>
-          <Link to="/payments" style={linkStyle}>
-            Making Payments
-          </Link>
-          <Link to="/delivery" style={linkStyle}>
-            Delivery Options
-          </Link>
-          <Link to="/buyer-protection" style={linkStyle}>
-            Buyer Protection
-          </Link>
-        </div>
-
-        <div>
-          <h3 style={{ color: '#fbceb1' }}>Collaborate with Us</h3>
-          <Link to="/partnerships" style={linkStyle}>
-            Partnerships
-          </Link>
-          <Link to="/affiliates" style={linkStyle}>
-            Affiliate Program
-          </Link>
-          <Link to="/seller-login" style={linkStyle}>
-            Seller Log In
-          </Link>
-        </div>
-
-        <div>
-          <h3 style={{ color: '#fbceb1' }}>Payment Methods</h3>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-            <img src="/visa.png" alt="Visa" style={iconStyle} />
-            <img src="/mastercard.png" alt="MasterCard" style={iconStyle} />
-            <img src="/paypal.png" alt="PayPal" style={iconStyle} />
-            <img src="/apple_pay.png" alt="Apple Pay" style={iconStyle} />
-            <img src="/airtel_momo.png" alt="Airtel Pay" style={iconStyle} />
-            <img src="/mtn_momo.png" alt="MTN Pay" style={iconStyle} />
-          </div>
+    <footer className="footer">
+      <div className="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="/help-center">Help Center</a></li>
+          <li><a href="/terms">Terms and Conditions</a></li>
+          <li><a href="/feedback">Take our feedback survey</a></li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h3>Shopping with Us</h3>
+        <ul>
+          <li><a href="/payments">Making Payments</a></li>
+          <li><a href="/delivery">Delivery Options</a></li>
+          <li><a href="/buyer-protection">Buyer Protection</a></li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h3>Collaborate with Us</h3>
+        <ul>
+          <li><a href="/partnerships">Partnerships</a></li>
+          <li><a href="/affiliates">Affiliate Program</a></li>
+          <li><a href="/seller-login">Seller Log In</a></li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h3>PAYMENT METHODS</h3>
+        <div className="payment-icons flex">
+          <img src="/visa.png" alt="Visa" />
+          <img src="/mastercard.png" alt="MasterCard" />
+          <img src="/paypal.png" alt="PayPal" />
+          <img src="/apple_pay.png" alt="Apple Pay" />
+          <img src="/airtel_momo.png" alt="Airtel Pay" />
+          <img src="/mtn_momo.png" alt="MTN Pay" />
         </div>
 
         <div>
@@ -87,13 +60,13 @@ function Footer() {
   );
 }
 
-const linkStyle = {
-  color: '#f8a879',
-  textDecoration: 'none',
-  margin: '5px 0',
-  fontWeight: 'bold',
-  display: 'block',
-};
+// const linkStyle = {
+//   color: '#f8a879',
+//   textDecoration: 'none',
+//   margin: '5px 0',
+//   fontWeight: 'bold',
+//   display: 'block',
+// };
 
 const iconStyle = {
   width: '40px',

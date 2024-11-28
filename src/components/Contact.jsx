@@ -25,7 +25,7 @@ const ContactPage = () => {
 
 
       {/* Contact Form */}
-      <div className="bg-white rounded-lg shadow-md p-6 mx-auto max-w-[30%]">
+      <div className="bg-white rounded-lg shadow-md p-6 mx-auto max-w-[50%]">
         <h2 className="text-lg font-medium mb-4 text-[#793b51]">Get in Touch</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -57,7 +57,7 @@ const ContactPage = () => {
           </div>
           <button
             type="submit"
-            className="w-3/4 bg-[#793b51] text-white rounded-full py-2 hover:bg-[#5d2c3d] transition-colors"
+            className="w-1/4 bg-[#793b51] text-white rounded-full py-2 hover:bg-[#5d2c3d] transition-colors ml-52"
           >
             Send Message
           </button>
