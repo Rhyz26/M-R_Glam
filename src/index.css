@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 
 *{
@@ -10,6 +8,7 @@
 .header{
     background-color: red;
 }
+
 
   html, body {
     height: 100%;
@@ -24,7 +23,7 @@
   footer {
     position: absolute;
   }
-  .footer {
+  j.footer {
     display: flex;
     justify-content: space-between;
     background-color: #fbceb1;
@@ -32,9 +31,8 @@
     padding: 10px;
     flex-wrap: wrap;
     gap: 15px;
-    position: sticky;
-    position: fixed;
     bottom: 0;
     width: 100%;
   }
+  
   
