@@ -11,7 +11,6 @@
     background-color: red;
 }
 
-
   html, body {
     height: 100%;
     margin: 0;
@@ -24,6 +23,15 @@
   
   footer {
     position: absolute;
+  }
+  j.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fbceb1;
+    color: #793b51;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
     bottom: 0;
     width: 100%;
   }
